@@ -18,7 +18,6 @@ class GoodsDetailActivity : BaseActivity() {
     private fun initview() {
         mGoodsDetailTab.tabMode = TabLayout.MODE_FIXED
         mGoodsDetailVp.adapter = GoodsDetailVpAdapter(supportFragmentManager,this)
-
         mGoodsDetailTab.setupWithViewPager(mGoodsDetailVp)
     }
 }

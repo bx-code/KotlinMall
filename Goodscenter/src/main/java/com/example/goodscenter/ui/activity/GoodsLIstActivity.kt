@@ -50,7 +50,7 @@ class GoodsLIstActivity : BaseMVPActivity<GoodsPresenter>(),GoodsView, BGARefres
         mGoodsRv.adapter = goodsAdapter
         goodsAdapter.setOnItemClickListener(object : BaseRecyclerViewAdapter.OnItemClickListener<Goods>{
             override fun onItemClick(item: Goods, position: Int) {
-                startActivity<GoodsDetailActivity>()
+                startActivity<GoodsDetailActivity>(GoodsConstant.KEY_GOODS_ID to item.id)
             }
         })
     }
