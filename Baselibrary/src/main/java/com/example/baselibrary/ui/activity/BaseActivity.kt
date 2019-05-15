@@ -1,8 +1,12 @@
 package com.example.baselibrary.ui.activity
 
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
+import com.example.baselibrary.R
 import com.example.baselibrary.common.ActivityManage
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity
+import org.jetbrains.anko.find
 
 /**
  * Created by baixiao on 2019/3/30.
@@ -25,5 +29,9 @@ open class BaseActivity : RxAppCompatActivity() {
         ActivityManage.instance.finishActivity(this)
     }
 
-
+    val contentView : View
+         get() {
+             val context = find<FrameLayout>(R.id.content)
+             return context.getChildAt(0)
+         }
 }

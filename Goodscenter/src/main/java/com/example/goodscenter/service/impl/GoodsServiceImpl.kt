@@ -10,6 +10,7 @@ import javax.inject.Inject
 class GoodsServiceImpl @Inject constructor(): GoodsService{
 
 
+
     @Inject
     lateinit var goodsRepository: GoodsRepository
     //商品列表
@@ -20,4 +21,9 @@ class GoodsServiceImpl @Inject constructor(): GoodsService{
     override fun GoodsKeyWord(keyWord: String, pageNo: Int): Observable<MutableList<Goods>?> {
                 return goodsRepository.GoodListKeyword(keyWord,pageNo).convert()
     }
+    //商品详情
+    override fun getGoodsDetail(goodsId: Int): Observable<Goods> {
+                return goodsRepository.GoodDetail(goodsId).convert()
+    }
+
 }

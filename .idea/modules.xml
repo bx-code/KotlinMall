@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Baselibrary/Baselibrary.iml" filepath="$PROJECT_DIR$/Baselibrary/Baselibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Goodscenter/Goodscenter.iml" filepath="$PROJECT_DIR$/Goodscenter/Goodscenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/MessageCenter/MessageCenter.iml" filepath="$PROJECT_DIR$/MessageCenter/MessageCenter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NewKotlin.iml" filepath="$PROJECT_DIR$/NewKotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/NewKotlin.iml" filepath="$PROJECT_DIR$/.idea/NewKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider/Provider.iml" filepath="$PROJECT_DIR$/Provider/Provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/Usercenter/Usercenter.iml" filepath="$PROJECT_DIR$/Usercenter/Usercenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
