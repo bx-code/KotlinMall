@@ -13,6 +13,8 @@
     <!-- Window黑色背景主题 -->
     <style name="AppTheme.Black" parent="@style/AppTheme">
         <item name="android:windowBackground">@color/common_black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
      多状态视图样式

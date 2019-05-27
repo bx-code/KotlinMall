@@ -2,6 +2,7 @@ package com.example.baselibrary.common
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 import com.example.baselibrary.injection.component.AppComponent
 import com.example.baselibrary.injection.component.DaggerAppComponent
 import com.example.baselibrary.injection.module.AppModule
@@ -21,6 +22,10 @@ class BaseApplication : Application() {
         super.onCreate()
         initAppInjection()
         context = this
+
+        ARouter.openLog() //ARouter 打印日志
+        ARouter.openDebug() //开启调试模式
+        ARouter.init(this)
     }
 
     private fun initAppInjection() {

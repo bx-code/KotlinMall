@@ -31,7 +31,7 @@ open class BaseActivity : RxAppCompatActivity() {
 
     val contentView : View
          get() {
-             val context = find<FrameLayout>(R.id.content)
+             val context = find<FrameLayout>(android.R.id.content)
              return context.getChildAt(0)
          }
 }

@@ -7,7 +7,6 @@ android {
     compileSdkVersion 27
 
 
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
@@ -81,4 +80,7 @@ dependencies {
     api 'com.hyman:flowlayout-lib:1.1.2'
     //RxBus
     api 'com.eightbitlab:rxbus:1.0.2'
+    //ARouter
+    api "com.alibaba:arouter-api:$arouter_api_version"
+
 }

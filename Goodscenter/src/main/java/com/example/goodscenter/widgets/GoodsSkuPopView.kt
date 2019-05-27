@@ -15,6 +15,7 @@ import com.example.baselibrary.ext.onLoadUrl
 import com.example.goodscenter.common.GoodsConstant
 import com.example.goodscenter.data.protocal.GoodsSku
 import com.example.goodscenter.event.AddCartEvent
+import com.example.goodscenter.event.SkuChangedEvent
 import com.example.goodscenter.getEditText
 import com.kotlin.base.utils.YuanFenConverter
 import com.kotlin.base.widgets.DefaultTextWatcher
@@ -67,17 +68,16 @@ class GoodsSkuPopView(context: Activity) : PopupWindow(context), View.OnClickLis
     private fun initView() {
         mRootView.mCloseIv.setOnClickListener(this)
         mRootView.mAddCartBtn.setOnClickListener(this)
-
         mRootView.mSkuCountBtn.setCurrentNumber(1)
         mRootView.mSkuCountBtn.getEditText().addTextChangedListener(
                 object : DefaultTextWatcher(){
                     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                        Bus.send(SkuChangedEvent())
+                        Bus.send(SkuChangedEvent())
                     }
                 }
         )
         mRootView.mAddCartBtn.setOnClickListener {
-            Bus.send(AddCartEvent())
+            Bus.send(SkuChangedEvent())
             dismiss()
         }
     }
@@ -86,6 +86,7 @@ class GoodsSkuPopView(context: Activity) : PopupWindow(context), View.OnClickLis
         when (p0.id) {
             R.id.mCloseIv -> dismiss()
             R.id.mAddCartBtn -> {
+                Bus.send(AddCartEvent())
                 dismiss()
             }
         }
@@ -112,6 +113,7 @@ class GoodsSkuPopView(context: Activity) : PopupWindow(context), View.OnClickLis
         mRootView.mGoodsCodeTv.text = "商品编号:" + text
     }
 
+
     /*
      设置商品SKU
      */
@@ -124,7 +126,7 @@ class GoodsSkuPopView(context: Activity) : PopupWindow(context), View.OnClickLis
         }
     }
 
-    /*u
+    /*
         获取选中的SKU
      */
     fun getSelectSku(): String {

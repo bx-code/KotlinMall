@@ -13,7 +13,7 @@
             />
 
         <activity android:name=".ui.activity.GoodsDetailActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@style/AppTheme.Black"
             />
     </application>
 

@@ -2,11 +2,13 @@ package com.example.usercenter.ui.activity
 
 import android.os.Bundle
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.baselibrary.common.ActivityManage
 import com.example.baselibrary.common.Constant
 import com.example.baselibrary.ext.OnClick
 import com.example.baselibrary.ext.enstart
 import com.example.baselibrary.ui.activity.BaseMVPActivity
+import com.example.provider.router.RouterPath
 import com.example.usercenter.R
 import com.example.usercenter.injection.component.DaggerUserComponent
 import com.example.usercenter.injection.module.Usermodule
@@ -22,6 +24,7 @@ import org.jetbrains.anko.toast
  * Created by baixiao on 2019/3/30.
  */
 
+@Route(path = RouterPath.UserCenter.path_login)
 class LoginActivity: BaseMVPActivity<LoginPresenter>(), LoginView,View.OnClickListener {
 
 
